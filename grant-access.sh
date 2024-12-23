@@ -8,6 +8,8 @@ AWS_ACCOUNT=$(aws sts get-caller-identity --output text --query 'Account' | tr -
 echo "Running as AWS user: ${AWS_USER}"
 echo "For AWS account: ${AWS_ACCOUNT}"
 echo
+echo "Press enter to continue..."
+read -r
 echo "Creating custom role \`ByondLabsRole\`: "
 
 aws iam create-role \
